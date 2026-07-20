@@ -1,0 +1,25 @@
+end2end_eval:
+  metrics:
+    text_block:
+      metric:
+        - Edit_dist
+        - BLEU
+        - METEOR
+    display_formula:
+      metric:
+        - Edit_dist
+        - CDM_plain
+    table:
+      metric:
+        - TEDS
+        - Edit_dist
+    reading_order:
+      metric:
+        - Edit_dist
+  dataset:
+    dataset_name: end2end_dataset
+    ground_truth:
+      data_path: /project/LNUN5155_1759/personal_workspaces/SHETTYV3468/OmniDocBench/data/OmniDocBench.json
+    prediction:
+      data_path: /project/LNUN5155_1759/personal_workspaces/SHETTYV3468/OmniDocBench/predictions_qwen35
+    match_method: quick_match
